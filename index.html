@@ -336,8 +336,6 @@
   /* ---------- Pressemitteilungen ---------- */
   .press { background: #fff; border: 1px solid var(--line); border-top: 6px solid var(--purple); padding: 48px 56px 52px; }
   .press + .agenda { margin-top: 32px; }
-  .grid > .press-wide { grid-column: 1 / -1; }
-  .wide-section .wrap > .event:first-of-type { margin-top: 0; }
   .press .label { margin-bottom: 18px; }
   .press-date { font-family: var(--head); font-weight: 600; font-size: 16px; letter-spacing: .02em; color: #6b6e75; margin-bottom: 10px; }
   .press h2 { font-size: clamp(28px, 3.2vw, 42px); font-weight: 700; color: var(--purple); max-width: 900px; }
@@ -351,31 +349,6 @@
   .press-contact a { color: var(--blue); }
   .btn.btn-outline { margin-top: 0; background: #fff; color: var(--purple); }
   .btn.btn-outline:hover { background: var(--purple); border-color: var(--purple); color: #fff; }
-  /* ---------- Kongress 2027: Termin mit Programm, bewusst ohne Namen ---------- */
-  .event { background: #fff; border: 1px solid var(--line); border-top: 6px solid var(--blue); padding: 48px 56px 52px; margin-top: 32px; }
-  .event + .li-box, .event + .agenda { margin-top: 32px; }
-  .event .label { margin-bottom: 18px; color: var(--blue); }
-  .event-grid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 48px; align-items: start; }
-  .event h2 { font-size: clamp(28px, 3.2vw, 42px); font-weight: 700; color: var(--purple); }
-  .event .sub { font-weight: 500; font-size: clamp(18px, 1.7vw, 20px); line-height: 1.5; color: var(--blue); margin-top: 16px; max-width: 760px; }
-  .event-facts { margin: 0; background: var(--paper); border-top: 4px solid var(--purple); padding: 6px 24px; }
-  .event-facts div { padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .event-facts div:last-child { border-bottom: 0; }
-  .event-facts dt { font-family: var(--head); font-weight: 600; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); }
-  .event-facts dd { margin: 4px 0 0; font-weight: 600; font-size: 17px; line-height: 1.4; }
-  .btn.event-cta { display: flex; justify-content: center; margin-top: 16px; }
-  .event-prog { list-style: none; margin: 24px 0 0; padding: 0; max-width: 860px; border-top: 1px solid var(--line); }
-  .event-prog li { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .event-prog time { font-family: var(--head); font-weight: 700; font-size: 18px; line-height: 1.4; color: var(--purple); }
-  .event-prog p { margin: 0; font-size: 17px; line-height: 1.45; font-weight: 500; }
-  .event-prog p + p { margin-top: 8px; }
-  .event-prog .pause p { color: #6b6e75; font-weight: 400; }
-  .event-note { margin-top: 16px; font-size: 15px; color: #6b6e75; }
-  @media (max-width: 960px) { .event-grid { grid-template-columns: 1fr; gap: 28px; } }
-  @media (max-width: 760px) {
-    .event { padding: 30px 24px 34px; }
-    .event-prog li { grid-template-columns: 54px 1fr; gap: 14px; }
-  }
   /* ---------- Impressum & Datenschutz (erscheinen über die Footer-Links) ---------- */
   [id] { scroll-margin-top: 124px; }
   .legal { background: var(--white); padding: 72px 0 80px; border-top: 1px solid var(--line); }
@@ -606,10 +579,9 @@
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="#die-allianz">Die Allianz</a>
       <div class="nav-group">
-        <a href="#pm-101126" class="nav-parent" aria-haspopup="true">Aktuell<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+        <a href="#presse" class="nav-parent" aria-haspopup="true">Aktuell<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
         <div class="subnav"><div class="subnav-inner">
-          <a href="#pm-101126">Pressemitteilung 10.11.2026</a>
-          <a href="#kongress-2027">Kongress 2027</a>
+          <a href="#presse">Pressemitteilungen</a>
           <a href="#agenda-2035">Agenda Wasserstraße 2035</a>
         </div></div>
       </div>
@@ -669,7 +641,7 @@
           <h3>Die Gründungsmitglieder der Allianz Wasserstraße e.&#8239;V.</h3>
           <ul class="members">
             <li><strong>duisport – Duisburger Hafen AG</strong><span>betreibt den größten Binnenhafen der Welt und eine der bedeutendsten Logistikdrehscheiben Europas – 2025 mit 50,8 Mio. Tonnen Gruppenumschlag, darin 4,1 Mio. Container (TEU) und rund 1.400 Beschäftigten.</span></li>
-            <li><strong>HGK AG</strong><span>betreibt mit ihrem Business-Segment Schifffahrt die größte Binnenschiffsflotte Europas, bedient vor allem das Rheinland, mit rund 2.700 Beschäftigten, 73,1 Mio. Tonnen Transport- und Umschlagsleistung, darin 1,1 Mio. Container (TEU), 646,7 Mio. Euro Gruppenumsatz (2025).</span></li>
+            <li><strong>HGK AG</strong><span>betreibt mit ihrem Business-Segment Schifffahrt die größte Binnenschiffsflotte Europas, bedient vor allem das Rheinland, mit rund 2.700 Beschäftigten, 76,9 Mio. Tonnen Transport- und Umschlagsleistung, darin 1,7 Mio. Container (TEU), 815 Mio. Euro Gruppenumsatz.</span></li>
             <li><strong>Rhenus Port Logistics</strong><span>ist das internationale Hafenlogistik-Geschäftsfeld der Rhenus-Gruppe, 8,2 Mrd. Euro Umsatz, 39.000 Beschäftigte und über 1.300 Standorte weltweit.</span></li>
             <li><strong>Viking River Cruises AG</strong><span>ist eines der weltweit führenden Kreuzfahrtunternehmen mit einer Flotte von 103 Schiffen, darunter 89 Flusskreuzfahrtschiffe, auf sieben Kontinenten, fünf Ozeanen und 21 Flüssen weltweit. Umsatz von 6,5 Milliarden US-Dollar in 2025, 15.000 Mitarbeitende.</span></li>
           </ul>
@@ -696,35 +668,6 @@
         <div class="sl-dots" role="tablist" aria-label="Motiv auswählen"></div>
         <span class="sl-count" aria-live="polite">1 / 8</span>
         <button class="sl-btn sl-next" type="button" aria-label="Nächstes Motiv"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      </div>
-    </article>
-
-    <!-- Aktuelle Pressemitteilung über beide Spalten -->
-    <article class="press press-wide" id="pm-101126">
-      <span class="label">Pressemitteilung</span>
-      <p class="press-date">10. November 2026</p>
-      <h2>Wasserstraßenverwaltung: Fast jede zweite Beamtenstelle unbesetzt – Allianz fordert grundlegende Neuordnung.</h2>
-      <p class="sub">Neue IW-Untersuchung: 41,5 Prozent der Beamtenstellen in der Wasserstraßenverwaltung des Bundes sind unbesetzt. Die Allianz Wasserstraße schlägt Cluster mit eigenem Budget und eine Gesellschaft nach dem Vorbild der Autobahn GmbH vor.</p>
-      <div class="press-actions">
-        <details class="toggle readmore">
-          <summary><span class="when-closed">weiterlesen</span><span class="when-open">weniger</span></summary>
-          <div class="press-body">
-            <p class="press-place">Berlin, 10. November 2026</p>
-            <p>Zur aktuellen Debatte um die Personalsituation in der Wasserstraßenverwaltung erklärt Steffen Bauer, Mitglied des Vorstands der Allianz Wasserstraße und CEO der HGK:</p>
-            <p>„Die deutschen Wasserstraßen sind Lebensadern der Industrie und auch für die europäischen Nachbarn nicht ersetzbare Transportwege.</p>
-            <p>Die Industrie braucht die Sicherheit, dass die Wasserwege verlässlich gemanagt werden. Dazu sind mehr Standardisierung und Digitalisierung nötig. Die Forderung, die Wasserstraßen- und Schifffahrtsverwaltung des Bundes (WSV) bei operativen und sicherheitsrelevanten Aufgaben sowie bei Planung und Genehmigung vom Stellenabbau beim Bund auszunehmen, ist richtig. Dies allein löst das Problem aber nicht.</p>
-            <p>Angesichts des zunehmenden Fachkräftemangels können knappe personelle und finanzielle Ressourcen nicht länger auf eine Vielzahl isolierter Einzelprojekte verteilt werden. Die Allianz Wasserstraße schlägt deshalb vor, Bundeswasserstraßen in strategisch relevante Cluster zu gliedern und Planungskapazitäten, Investitionsmittel und Projektverantwortung dort zu bündeln.</p>
-            <p>Wir müssen weg von der Einzelprojektlogik und hin zur strategischen Steuerung ganzer Wasserstraßencluster. Nur so können wir mit den vorhandenen Fachkräften und Haushaltsmitteln die größtmögliche Wirkung für die Leistungsfähigkeit des gesamten Wasserstraßennetzes erzielen.</p>
-            <p>Außerdem braucht es ein attraktiveres Beschäftigungsangebot in der WSV, damit die vorhandenen Stellen auch tatsächlich besetzt werden und die Beschäftigten insgesamt bessere Entwicklungs- und Vergütungsmöglichkeiten erhalten.“</p>
-            <p>Aktuell sind 41,5 Prozent der Planstellen für Beamte unbesetzt. In der Besoldungsgruppe A&nbsp;14, in der typischerweise Ingenieure arbeiten, sind es sogar 48 Prozent. 60 Prozent der Wasserstraßen- und Brückenwärter sind 50 Jahre oder älter. Zugleich ist die Zahl der Studierenden im Wasserbau seit dem Wintersemester 2020/21 um 42 Prozent zurückgegangen. Das zeigt eine aktuelle Untersuchung des IW im Auftrag der Allianz Wasserstraße. Die Details stehen im beigefügten Positionspapier.</p>
-            <p>Bauer weiter: „Vorbild für ein attraktiveres Beschäftigungsangebot ist die Bündelung in einer GmbH, wie sie bei den Bundesautobahnen erfolgreich umgesetzt wurde. Die Autobahn GmbH des Bundes betreut mit etwa 20 Prozent mehr Personal ein rund 81 Prozent längeres Netz als die WSV. Planung und Bau haben sich dort deutlich verbessert.</p>
-            <p>Eine solche Neuordnung der Zuständigkeiten, der Mittelzuweisung und des Beschäftigungsangebots sollte der Bundestag im Rahmen des Haushalts 2027 mit auf den Weg bringen.“</p>
-            <p class="press-contact"><strong>Kontakt:</strong><br>Dr. Lutz Meyer<br>Leiter Interessenvertretung Allianz Wasserstraße e.&#8239;V.<br><a href="mailto:lutz.meyer@allianz-wasserstrasse.de" target="_blank" rel="noopener">lutz.meyer@allianz-wasserstrasse.de</a></p>
-          </div>
-        </details>
-        <a class="btn btn-outline pdf-dl" href="presse/PM_Allianz-Wasserstrasse_101126.pdf" download="PM_Allianz-Wasserstrasse_101126.pdf" target="_blank" rel="noopener">PDF mit Positionspapier
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M6.5 10l5.5 5.5 5.5-5.5M5 20h14"/></svg>
-        </a>
       </div>
     </article>
 
@@ -904,7 +847,7 @@
       <div class="slider-track">
           <div class="slide chem" role="group" aria-roledescription="Folie" aria-label="1 von 5: Chemieindustrie × Wasserstraße">
             <div class="slide-head">
-              <span class="label">Chemieindustrie × Wasserstraße</span>
+              <span class="label">Chemieindustrie × Wasserstraẞe</span>
               <h2>Die Wasserstraßen ermöglichen Wertschöpfung in der Chemie.</h2>
             </div>
             <div class="chem-body">
@@ -923,7 +866,7 @@
           </div>
           <div class="slide chem" role="group" aria-roledescription="Folie" aria-label="2 von 5: Tourismus × Wasserstraße">
             <div class="slide-head">
-              <span class="label">Tourismus × Wasserstraße</span>
+              <span class="label">Tourismus × Wasserstraẞe</span>
               <h2>Wie Deutschlands Flüsse Reiseziele und Regionen verbinden.</h2>
             </div>
             <div class="chem-body">
@@ -942,7 +885,7 @@
           </div>
           <div class="slide chem" role="group" aria-roledescription="Folie" aria-label="3 von 5: Stromerzeugung × Wasserstraße">
             <div class="slide-head">
-              <span class="label">Stromerzeugung × Wasserstraße</span>
+              <span class="label">Stromerzeugung × Wasserstraẞe</span>
               <h2>Wie Deutschlands Wasserstraßen die Energieversorgung verbinden.</h2>
             </div>
             <div class="chem-body">
@@ -961,7 +904,7 @@
           </div>
           <div class="slide chem" role="group" aria-roledescription="Folie" aria-label="4 von 5: Stahlindustrie × Wasserstraße">
             <div class="slide-head">
-              <span class="label">Stahlindustrie × Wasserstraße</span>
+              <span class="label">Stahlindustrie × Wasserstraẞe</span>
               <h2>Wie Deutschlands Wasserstraßen die Stahl-Wertschöpfung verbinden.</h2>
             </div>
             <div class="chem-body">
@@ -980,7 +923,7 @@
           </div>
           <div class="slide chem" role="group" aria-roledescription="Folie" aria-label="5 von 5: Automobilindustrie × Wasserstraße">
             <div class="slide-head">
-              <span class="label">Automobilindustrie × Wasserstraße</span>
+              <span class="label">Automobilindustrie × Wasserstraẞe</span>
               <h2>Wie Deutschlands Wasserstraßen industrielle Lieferketten verbinden.</h2>
             </div>
             <div class="chem-body">
@@ -1014,47 +957,39 @@
 <section class="wide-section" id="aktuell">
   <div class="wrap">
 
-
-
-    <script>
-      // PDF-Download: im Artifact-Viewer über die Download-Freigabe, sonst als normaler Link
-      (() => {
-        const links = document.querySelectorAll('.pdf-dl');
-        if (!links.length || !window.claude || !window.claude.use) return;
-        let dl = null;
-        window.claude.use('downloads').then(d => { dl = d; }).catch(() => {});
-        links.forEach(a => a.addEventListener('click', async e => {
-          if (!dl) return;
-          e.preventDefault();
-          try {
-            const blob = await (await fetch(a.getAttribute('href'))).blob();
-            await dl.save({ filename: a.getAttribute('download'), data: blob });
-          } catch (err) { /* abgelehnt oder nicht verfügbar */ }
-        }));
-      })();
-    </script>
-
-    <!-- Kongress 2027: Programm vorläufig, bewusst ohne Namen der Mitwirkenden -->
-    <article class="event" id="kongress-2027">
-      <div class="event-grid">
-        <div>
-          <span class="label">Veranstaltung</span>
-          <p class="press-date">16. März 2027 · Futurium Berlin</p>
-          <h2>Kongress Wasserstraße und Binnenschifffahrt 2027</h2>
-          <p class="sub">Wichtige Teile des Wirtschaftsstandorts Deutschland hängen an leistungsfähigen Wasserstraßen und einer verlässlichen Binnenschifffahrt. 2027 müssen die richtigen Entscheidungen für die Zukunft getroffen werden. Die Allianz Wasserstraße versammelt Politik, Wirtschaft, Verbände, Verwaltung und Wissenschaft in Berlin, um neue Ideen und erfolgreiche Konzepte zu diskutieren.</p>
-        </div>
-        <div>
-          <dl class="event-facts">
-            <div><dt>Datum</dt><dd>Dienstag, 16. März 2027</dd></div>
-            <div><dt>Zeit</dt><dd>10.00 bis 16.00 Uhr</dd></div>
-            <div><dt>Ort</dt><dd>Futurium<br>Alexanderufer 2, 10117 Berlin</dd></div>
-          </dl>
-          <a class="btn event-cta" href="mailto:kongress@allianz-wasserstrasse.de?subject=Einladung%20zum%20Kongress%20Wasserstra%C3%9Fe%20und%20Binnenschifffahrt%202027&amp;body=Guten%20Tag%2C%0D%0A%0D%0Aich%20m%C3%B6chte%20gern%20zum%20Kongress%20Wasserstra%C3%9Fe%20und%20Binnenschifffahrt%202027%20am%2016.%20M%C3%A4rz%202027%20im%20Futurium%20Berlin%20eingeladen%20werden.%0D%0A%0D%0AName%3A%0D%0AFunktion%3A%0D%0AUnternehmen%20%2F%20Organisation%3A%0D%0A%0D%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen%0D%0A" target="_blank" rel="noopener">Eingeladen werden
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg>
-          </a>
-        </div>
+    <!-- Pressemitteilungen -->
+    <article class="press" id="presse">
+      <span class="label">Pressemitteilungen</span>
+      <p class="press-date">14. Oktober 2026</p>
+      <h2>„Wenn der Rhein nicht schiffbar ist, droht ein Industriekollaps in Deutschland.“</h2>
+      <p class="sub">Führende Unternehmen der Binnenschifffahrt gründen die Allianz Wasserstraße und fordern einen verbindlichen Ausbauplan ab 2027, Vorrang für den Rhein und eine Niedrigwasserflotte.</p>
+      <div class="press-actions">
+        <details class="toggle readmore">
+          <summary><span class="when-closed">weiterlesen</span><span class="when-open">weniger</span></summary>
+          <div class="press-body">
+            <p class="press-place">Berlin, 14. Oktober 2026</p>
+            <p>„Ohne Binnenschifffahrt ist die deutsche Industrie nicht arbeitsfähig. Die Infrastruktur der wichtigen Wasserwege in Deutschland muss jetzt rasch modernisiert werden, damit Unternehmen weiterhin verlässlich beliefert werden können und der Tourismus nicht einbricht. Mit unserer Agenda Wasserstraße 2035 legen wir einen Plan vor, wie die Zukunft der Wasserstraßen in Deutschland gesichert werden kann“, erklären Steffen Bauer – CEO der HGK, Markus Bangen – CEO von duisport, Michael de Reese – CEO von Rhenus Port Logistics und Thomas Bogler – Vice President von Viking River Cruises.</p>
+            <p>Führende Unternehmen der Binnenschifffahrt haben sich zur „Allianz Wasserstraße“ zusammengeschlossen, um den Ausbau der Infrastruktur und die Modernisierung der Flotte voranzutreiben.</p>
+            <p>Die Binnenschifffahrt verbindet die Seehäfen mit den Industriezentren an Rhein, Ruhr, Main, Neckar und Mosel. 2025 transportierte sie mehr als 171 Millionen Tonnen Güter: Erz und Kohle für die Stahlwerke, Mineralöl für die Raffinerien, Rohstoffe für die Chemie, Baustoffe und Agrargüter. Weder die Bahn noch die Straße können diese Mengen aufnehmen. Auch für den Tourismus spielt die Binnenschifffahrt eine wichtige Rolle.</p>
+            <p>„Die Wasserwege wurden jahrelang vernachlässigt. Die Bundesregierung steuert jetzt richtigerweise um und will investieren“, sagt Markus Bangen, CEO von duisport. Für 2027 sind mehr als 2 Milliarden Euro für Unterhalt und Ausbau vorgesehen. „Dieses Budget muss jetzt vom Bundestag beschlossen und dann schnell in Ergebnisse umgesetzt werden.“</p>
+            <p>Die Allianz ist besorgt über das Alter der Wasserstraßen-Infrastruktur. Ein Großteil der Schleusen und Wehre ist so marode, dass sie die Binnenschifffahrt massiv beeinträchtigen. „Deutschland kann sich beim Ausbau seiner Wasserstraßen keinen weiteren Stillstand leisten“, sagt Michael de Reese, CEO von Rhenus Port Logistics.</p>
+            <p>Konkret schlägt die Allianz Wasserstraße fünf neue Prinzipien für den Ausbau vor:</p>
+            <p><strong>In Clustern planen:</strong> Wasserwege mit Häfen, Schleusen und Wehren sollten in zusammenhängenden Clustern geplant und instandgesetzt werden. Die Allianz will gemeinsam mit dem Bund und der Wissenschaft einen Vorschlag entwickeln, wie die Wasserwege in zusammenhängenden Clustern gruppiert werden können.</p>
+            <p><strong>Flexibles Budget:</strong> Künftig sollten die Haushaltsmittel den Clustern statt Einzelprojekten zugeteilt werden. Wenn z.&#8239;B. ein Schleusenneubau stockt, muss das Budget in andere Projekte, die sofort umgesetzt werden können, fließen. „Wir brauchen diese Flexibilität, damit die Modernisierung die notwendige Geschwindigkeit bekommt“, sagt Thomas Bogler, Vice President Viking River Cruises.</p>
+            <p><strong>Vorrang für Wirtschaftskraft:</strong> Mehr als 80 Prozent des Binnenhafen-Umschlags entfallen auf den Rhein und das westdeutsche Kanalnetz. Die Allianz empfiehlt, dass die Mittel aus dem Sondervermögen vor allem dort investiert werden. „Wenn der Rhein nicht schiffbar ist, droht ein Industriekollaps in Deutschland“, sagt Steffen Bauer, CEO der HGK AG.</p>
+            <p><strong>Niedrigwasserflotte:</strong> Niedrigwasserphasen werden in Zukunft häufiger auftreten und länger anhalten. Zugleich steigt die Hochwassergefahr im Winter. Die Allianz sieht für Deutschland den Bedarf von 250–300 neuen Schiffen, die für Niedrigwasser ausgelegt und future-fuel-ready sind, und fordert ein „Flottenerneuerungsprogramm Binnenschifffahrt 2035“.</p>
+            <p><strong>Verbindlicher Ausbauplan:</strong> Damit die neuen Finanzmittel rasch in Projekte umgesetzt werden können, fordert die Allianz den Bundestag auf, im Zuge der Haushaltsbeschlüsse im November einen konkreten Finanzierungs- und Realisierungsplan, wie es ihn auch für Bahn und Autobahn gibt, zu verabschieden.</p>
+            <p>Die Gründungsmitglieder der Allianz Wasserstraße e.&#8239;V. laden weitere Unternehmen ein, sich der gemeinsamen Agenda anzuschließen, um die Zukunft des Systems Wasserstraße zu sichern.</p>
+            <p class="press-contact"><strong>Kontakt:</strong><br>allianz-wasserstrasse.de<br><a href="mailto:medien@allianz-wasserstrasse.de">medien@allianz-wasserstrasse.de</a><br>Telefon <a href="tel:+4930232558153">+49 (0)30 232 558 153</a><br>Allianz Wasserstraße e.&#8239;V.<br>Reinhardtstraße 55, R5212, 10117 Berlin</p>
+          </div>
+        </details>
+        <a class="btn btn-outline pdf-dl" href="presse/PM_Allianz-Wasserstrasse_141026.pdf" download="PM_Allianz-Wasserstrasse_141026.pdf" target="_blank" rel="noopener">PDF herunterladen
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M6.5 10l5.5 5.5 5.5-5.5M5 20h14"/></svg>
+        </a>
       </div>
     </article>
+
+
 
     <!-- Agenda Wasserstraße 2035 -->
     <article class="agenda" id="agenda-2035">
@@ -1093,8 +1028,8 @@
           <summary><span class="pnum">2</span><span class="ptitle">Flexibler Budget-Einsatz.</span></summary>
           <div class="pbody">
             <p>Bei den Investitionen geht es um Fahrrinnenvertiefung, Erneuerung und Ausbau der Schleusen, Verbesserung der Kaimauern für Niedrigwasserlagen und anderes.</p>
-            <p>Abgeleitet aus dem Paradigmenwechsel des Planens in Clustern und der Sicherstellung der Verfügbarkeit müssen die im Haushalt vorgesehenen Maßnahmen innerhalb eines Clusters gegenseitig deckungsfähig sein.</p>
-            <p>Wenn im Laufe der Planung der Mittelabfluss für eine Schleusenerweiterung stockt, müssen die Mittel innerhalb desselben Clusters z.&#8239;B. in Kaimauern für Niedrigwasserlagen oder in die Fahrrinne gelenkt werden können.</p>
+            <p>Abgeleitet aus dem Paradigmenwechsel des Planens in Clustern und der Sicherstellung der Verfügbarkeit müssen die im Haushalt vorgesehenen Maßnahmen gegenseitig deckungsfähig sein.</p>
+            <p>Wenn im Laufe der Planung der Mittelabfluss für eine Schleusenerweiterung stockt, müssen die Mittel z.&#8239;B. in Kaimauern für Niedrigwasserlagen oder in den weiteren Ausbau einer Niedrigwasserflotte gelenkt werden können.</p>
           </div>
         </details>
         <details class="principle">
@@ -1114,10 +1049,10 @@
           <div class="pbody">
             <p>Europaweit sind bisher nur dreizehn Frachtschiffe auf Niedrigwasser ausgelegt. Neun davon fahren für HGK. Von den in Deutschland angemeldeten vier gehören drei Rhenus.</p>
             <p>Diese kleine Flotte ist deutlich zu wenig.</p>
-            <p>Wir brauchen allein für Deutschland rund 350 neue Schiffe bis 2035, die bei niedrigen und hohen Wasserständen fahren und künftig emissionsfrei betrieben werden können – als Beitrag zu bis zu 1.000 modernen Güterschiffen in Europa. Bestehende Referenzschiffe zeigen, dass Tiefgänge von etwa 1,00 bis 1,20 Metern im Regelbetrieb realisierbar sind. Jetzt geht es um die Serienfertigung.</p>
-            <p>Dafür braucht es Serienbau statt Einzelanfertigungen und wachsende europäische Werftkapazitäten. Bisher werden in Europa im Schnitt nur rund 120 Binnenschiffe pro Jahr gebaut. Das muss aufgebaut werden, und dafür braucht es jetzt die Nachfrage.</p>
+            <p>Wir brauchen allein für Deutschland ein Flottenprogramm für 250–300 neue Schiffe, die für Niedrigwasser ausgelegt sind. Bestehende Referenzschiffe zeigen, dass Tiefgänge von etwa 1,00 bis 1,20 Metern im Regelbetrieb grundsätzlich realisierbar sind. Aber das gelingt nur mit Neubau.</p>
+            <p>Für den Neubau von 300 Schiffen innerhalb von acht Jahren braucht es dedizierte Werftkapazität von bis zu 10 parallelen Fertigungslinien, um ab 2028 jährlich rund 50 neue Schiffe in den deutschen Markt zu bringen. Das muss aufgebaut werden, und dafür braucht es jetzt die Nachfrage.</p>
             <p>Ein erheblicher Teil der Flotte wird von kleinen und mittleren Unternehmen sowie selbstständigen Schiffseignern – sogenannten Partikulieren – betrieben. Die hohen Investitionssummen und langen Amortisationszeiten moderner Neubauten stellen gerade für diese Unternehmen eine erhebliche Hürde dar.</p>
-            <p>Wir als Allianz Wasserstraße schlagen deshalb ein „Flottenerneuerungsprogramm Binnenschifffahrt 2035“ vor: Der Bund stellt ab 2027 mindestens 400 Millionen Euro jährlich bereit und fördert bei Neubauten und Umbauten die Mehrkosten für Resilienz und Zukunftsfähigkeit. Die Basiskosten tragen die Eigner.</p>
+            <p>Wir als Allianz Wasserstraße schlagen deshalb ein „Flottenerneuerungsprogramm Binnenschifffahrt 2035“ vor, mit dem die notwendigen Investitionssummen mobilisiert werden können, z.&#8239;B. über Kreditprogramme und Zinsvergünstigungen.</p>
             <p><strong>Der Industriestandort Deutschland ist ohne ein solches Programm nicht zukunftsfähig.</strong></p>
           </div>
         </details>
@@ -1138,10 +1073,9 @@
         <summary><span class="pnum pnum-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="17" width="6" height="12"/><rect x="13" y="9" width="6" height="20"/><rect x="23" y="3" width="6" height="26"/></svg></span><span class="ptitle">Die Bedeutung der Binnenschifffahrt in Zahlen</span></summary>
         <div class="pbody facts-body">
             <h3>Die Binnenschifffahrt in Deutschland</h3>
-            <p>Die Unternehmen der Binnenschifffahrt in Deutschland betreiben mehr als 1.700 Güterschiffe, mehr als 350 Schlepper und Schubboote, rund 1.000 Fahrgastschiffe für Ausflüge und Flusskreuzfahrten sowie Hafenanlagen (Stand 2025).</p>
+            <p>Die Unternehmen der Binnenschifffahrt in Deutschland betreiben mehr als 1.800 Schiffe, mehr als 360 Schlepper und Schubboote, über 1.000 Fahrgastschiffe für Ausflüge und Flusskreuzfahrten sowie Hafenanlagen.</p>
             <p>In 2025 wurden durch die Binnenschifffahrt rund 171 Mio. t Güter bewegt, und das meist über weite Strecken. Jede Tonne Ladung fährt im Schnitt rund 250 km per Schiff. In Summe ergibt das 43 Mrd. Tonnenkilometer. Wir nennen das die Transportleistung der Binnenschifffahrt.</p>
-            <p>Bei der Fahrgastschifffahrt bieten rund 950 Ausflugsschiffe Platz für rund 210.000 Gäste – die größte Flotte dieser Art in Europa. Hinzu kommen 47 Kabinenschiffe mit rund 6.900 Betten.</p>
-            <p class="facts-source">Quelle Flottenzahlen: BDB, Daten &amp; Fakten 2025/2026 (nach GDWS), Stand 2025.</p>
+            <p>Bei der Fahrgastschifffahrt bieten fast 1.000 Ausflugsschiffe Platz für rund 215.000 Gäste – die größte Flotte dieser Art in Europa. Hinzu kommen 51 Kabinenschiffe mit 7.500 Betten.</p>
             <h3>Neuer Finanzierungsrahmen für Bundeswasserstraßen</h3>
             <p>Der Bund hat die Unterfinanzierung der Bundeswasserstraßen erkannt und im Sondervermögen zusätzliche Investitionen bereitgestellt. Zugleich wurde der Kernetat gekürzt.</p>
             <p><strong>Bundeshaushalt:</strong> Der Entwurf des Bundeshaushaltes 2027 sieht im Kapitel 1203 Bundeswasserstraßen rund 849 Mio. € vor. 2026 waren noch 1,82 Mrd. € eingestellt. Das Gros der Mittel ist jetzt für den Erhalt vorgesehen: Für Aus- und Neubaumaßnahmen stehen lediglich 263,5 Mio. € zur Verfügung. 2026 waren es noch 863,09 Mio. €.</p>
@@ -1243,13 +1177,13 @@
       <div class="wide-copy">
         <div class="feature-text">
         <p class="sub">Europaweit sind bisher nur dreizehn Frachtschiffe auf Niedrigwasser ausgelegt. Alle gehören den Mitgliedern der Allianz und sind auf deutschen Wasserstraßen unterwegs.</p>
-        <p class="body">Wir bringen neue Schiffe in den Markt, aber es braucht allein für Deutschland rund 350 neue Schiffe bis 2035, die bei niedrigen und hohen Wasserständen fahren und künftig emissionsfrei betrieben werden können. Denn der Großteil der deutschen und europäischen Flotte ist im Schnitt 50 Jahre alt und für die neuen Niedrigwasserextreme ungeeignet. Neben Neubauten gehören auch Umbauten und die Modernisierung der Bestandsflotte dazu.</p>
+        <p class="body">Wir bringen neue Schiffe in den Markt, aber es braucht allein für Deutschland ein Flottenprogramm für 250 bis 300 neue Schiffe, die für Niedrigwasser ausgelegt sind. Das gelingt nur mit Neubau. Denn der Großteil der deutschen und europäischen Flotte ist im Schnitt 50 Jahre alt und für die neuen Niedrigwasserextreme ungeeignet. Der Umbau dieser alten Schiffskörper ist nicht sinnvoll und nähme zudem wichtige Kapazitäten aus dem Markt.</p>
         <details class="toggle readmore">
           <summary>Flottenprogramm</summary>
-          <p>Rund 350 deutsche Neubauten bis 2035 sind der Mindestbeitrag zu einem europäischen Ziel von bis zu 1.000 modernen, resilienten und energieeffizienten Güterschiffen. Dafür braucht es Serienbau und wachsende europäische Werftkapazitäten.</p>
+          <p>Für den Neubau von 300 Schiffen innerhalb von acht Jahren braucht es dedizierte Werftkapazität von bis zu 10 parallelen Fertigungslinien, um ab 2028 jährlich rund 50 neue Schiffe in den deutschen Markt zu bringen.</p>
           <p>Das ist beträchtlicher Aufwuchs. Zum Vergleich: In Europa kommen derzeit insgesamt rund 100 bis 150 neue Binnenschiffe aller Kategorien jährlich auf den Markt; der Durchschnitt 2017–2024 lag bei etwa 120.</p>
-          <p>Ein solches Flottenprogramm für rund 350 neue Schiffe bis 2035 lässt sich nicht aus freien Restkapazitäten bedienen.</p>
-          <p>Ein Neubau kostet im Mittel rund 12,5&nbsp;Mio.&nbsp;€, davon entfallen rund 40 Prozent auf die Mehrkosten für Resilienz und Zukunftsfähigkeit. Gefördert werden sollen nur diese Mehrkosten, zu 80 Prozent. Mit mindestens 400&nbsp;Mio.&nbsp;€ jährlich ab 2027 lassen sich so rechnerisch rund 100 Neubauten pro Jahr anreizen. Rund 350 Neubauten lösen ein Investitionsvolumen von rund 4,4&nbsp;Mrd.&nbsp;€ aus, davon tragen die Eigner rund zwei Drittel.</p>
+          <p>Ein solches Flottenprogramm für 300 neue Niedrigwasserschiffe bis 2035 lässt sich nicht aus freien Restkapazitäten bedienen.</p>
+          <p>Eine gemischte Flotte aus Trocken-, Tank- und anderen Güterschiffen erfordert im Mittel ca. 12,5 Mio. € je Neubau. Damit ergäbe sich für Deutschland mit 300 neuen Trocken-, Tank- und anderen Niedrigwasserschiffen ein Investitionsvolumen von ca. 4 Mrd. €, das in den nächsten fünf Jahren aktiviert werden muss.</p>
           <p>Die Allianz Wasserstraße schlägt deshalb ein „Flottenerneuerungsprogramm Binnenschifffahrt 2035“ vor, mit dem die notwendigen Investitionssummen von den Unternehmen gemeinsam mit dem Bund mobilisiert werden.</p>
           <p>Ein solches Programm würde eine Nachfrage nach modernen Schiffen schaffen und zugleich dazu beitragen, europäische Schiffbaukapazitäten und technologische Kompetenz zu sichern und weiterzuentwickeln.</p>
           <p><strong>Der Industriestandort Deutschland ist ohne ein solches „Flottenerneuerungsprogramm Binnenschifffahrt“ nicht überlebensfähig.</strong></p>
@@ -1258,8 +1192,8 @@
         <div class="feature-side">
         <div class="figures">
           <div><strong>13</strong><span>Niedrigwasserschiffe sind heute in Deutschland im Einsatz.</span></div>
-          <div><strong>350</strong><span>neue, resiliente Güterschiffe brauchen wir bis 2035.</span></div>
-          <div><strong>400 Mio. €</strong><span>Bundesmittel jährlich ab 2027 für die Flottenerneuerung.</span></div>
+          <div><strong>300</strong><span>neue Niedrigwasserschiffe brauchen wir bis 2035.</span></div>
+          <div><strong>4 Mrd. €</strong><span>Investitionsvolumen für die neue Niedrigwasserflotte mobilisieren.</span></div>
         </div>
         </div>
       </div>
@@ -1362,12 +1296,10 @@
     <p>Allianz Wasserstraße e.&#8239;V.<br>Reinhardtstraße 55, R5212<br>10117 Berlin</p>
     <p>Vertreten durch den Vorstand: Markus Bangen, Steffen Bauer, Thomas Bogler, Michael de Reese</p>
     <p>Registergericht: Amtsgericht Charlottenburg<br>Registernummer: VR 42879 B</p>
-    <h3>Lobbyregister</h3>
-    <p>Beim Deutschen Bundestag registrierte Interessenvertretung.<br>Registernummer: R008305</p>
     <h3>Kontakt</h3>
     <p>Telefon: <a href="tel:+4930232558153">+49 (0)30 232 558 153</a><br>E-Mail: <a href="mailto:office@allianz-wasserstrasse.de">office@allianz-wasserstrasse.de</a></p>
     <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-    <p>Dr. Lutz Meyer<br>Leiter Interessenvertretung Allianz Wasserstraße e.&#8239;V., Reinhardtstraße 55, R5212, 10117 Berlin<br>E-Mail: <a href="mailto:lutz.meyer@allianz-wasserstrasse.de">lutz.meyer@allianz-wasserstrasse.de</a></p>
+    <p>Dr. Lutz Meyer<br>Allianz Wasserstraße e.&#8239;V., Reinhardtstraße 55, R5212, 10117 Berlin<br>E-Mail: <a href="mailto:lutz.meyer@allianz-wasserstrasse.de">lutz.meyer@allianz-wasserstrasse.de</a></p>
     <h3>Haftung für Inhalte</h3>
     <p>Wir erstellen die Inhalte dieser Website mit größtmöglicher Sorgfalt. Für ihre Richtigkeit, Vollständigkeit und Aktualität können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich. Wir sind nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen. Sobald uns eine konkrete Rechtsverletzung bekannt wird, entfernen wir die betreffenden Inhalte umgehend.</p>
     <h3>Haftung für Links</h3>
@@ -1423,7 +1355,7 @@
         </div>
       </div>
       <div>
-        <h3>Kontakt</h3>
+        <h3><a href="mailto:office@allianz-wasserstrasse.de">Kontakt</a></h3>
         <ul>
           <li>Allianz Wasserstraße e.&#8239;V.<br>Reinhardtstraße 55, R5212<br>10117 Berlin</li>
           <li><a href="mailto:office@allianz-wasserstrasse.de">office@allianz-wasserstrasse.de</a></li>
@@ -1437,8 +1369,7 @@
           <li><a href="#versorgung">Versorgungssicherheit</a></li>
           <li><a href="#schleusen">Schleusen und Wehre</a></li>
           <li><a href="#grafiken">Industrien</a></li>
-          <li><a href="#pm-101126">Pressemitteilung</a></li>
-          <li><a href="#kongress-2027">Kongress 2027</a></li>
+          <li><a href="#presse">Pressemitteilungen</a></li>
           <li><a href="#agenda-2035">Agenda Wasserstraße 2035</a></li>
           <li><a href="#zahlen">Zahlen</a></li>
           <li><a href="#niedrigwasserflotte">Niedrigwasserflotte</a></li>
@@ -1542,5 +1473,6 @@
     go(0); restart();
   });
 </script>
+
 
 </body></html>
